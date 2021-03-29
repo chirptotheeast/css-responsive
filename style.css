@@ -13,127 +13,176 @@ body {
 }
 
 h1 {
-    margin: 0;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color:inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
 }
 
 .navbar-wrapper {
-    box-shadow: 0px 0px 15px rgba(251,75,0,0.15);
+  box-shadow: 0px 0px 15px rgba(251, 75, 0, 0.15);
 }
 
 .layout {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 68.75rem;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 68.75rem;
 }
 /* margin: 0 auto; with align content center */
 
 .navbar_logo {
-    color: #fb4b04;
-    font-size: 1.125rem;
+  color: #fb4b04;
+  font-size: 1.125rem;
 }
 
-.navbar_link{
-    font-size: 0.75rem;
+.navbar_link {
+  font-size: 0.75rem;
 }
 
-.navbar_link:hover{
-    color: #fd7034;
+.navbar_link:hover {
+  color: #fd7034;
 }
 
 .navbar_link:active {
- color: #b53c08;
+  color: #b53c08;
 }
 
-.navbar_link +  .navbar_link {
-    margin-left: 0.5rem;
+.navbar_link + .navbar_link {
+  margin-left: 0.5rem;
 }
 /* will select second navbarlink stacking item*/
 
 .navbar_link--accent {
-    color: #fb4b04;
-    font-weight: bold;
+  color: #fb4b04;
+  font-weight: bold;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 /* makes it so that image won't overflow */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
 }
 
 .hero-title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem; 
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero_accent {
-    color: #fb4b04;
+  color: #fb4b04;
 }
 
-.hero_text{
-    line-height: 1.7;
-    margin-bottom: 1rem;
-} 
+.hero_text {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
 
 .hero_img {
-    width: 100%;
+  width: 100%;
 }
 
 .hero_content {
-   width: 100%; 
+  width: 100%;
 }
 
 .btn {
-    background-color: #fb4b00;
-    padding: 0.5em 1em;
-    color: white;
-    font-weight: bold;
-    border-radius:0.5rem;
-    border: 1px solid #fb4b00;
-    font-size: 0.875rem;
+  background-color: #fb4b00;
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: 1px solid #fb4b00;
+  font-size: 0.875rem;
 }
 
-/* typically padding is tighet with rem, em has more padding for same font size  */ 
-/* good to use em units for buttons, scales padding more porportionally with larger viewport */ 
+.btn:hover {
+  background-color: #fd7034;
+  border-color: #fd7034;
+}
+
+.btn:active {
+  background-color: #ff5810;
+  border-color: #ff5810;
+}
+
+/* typically padding is tighet with rem, em has more padding for same font size  */
+/* good to use em units for buttons, scales padding more porportionally with larger viewport */
 
 /* media query is the larger screen view */
-@media(min-width: 768px){
-    .hero {
-        flex-direction: row-reverse;
-    }
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row-reverse;
+  }
 
-    .hero_img {
-        max-width: 560px; 
-        margin-left: 2rem;
-    } 
+  .hero_img {
+    max-width: 560px;
+    margin-left: 2rem;
+  }
 
-    .hero_title {
-        font-size:3rem;
-    }
+  .hero_title {
+    font-size: 3rem;
+  }
 
-    .btn {
-        font-size: 1rem;
-    }
+  .btn {
+    font-size: 1rem;
+  }
 }
-
 
 /* 768px is the tablet size, Clarence usually starts with this */
 /* above this means when hero gets to 768 px it will go to row */
 /* this media query declares how to adjust the site when it gets larger
 so techinally, the site is orginally set up to be viewable on the phone*/
+
+/* ---------------------------- Why Section ------------ */
+
+.why {
+  background-color: #fff1eb;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.why_title {
+  margin-bottom: 0.5rem;
+}
+
+.why_text {
+  margin-bottom: 2rem;
+}
+.why_cardgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why_card-text {
+  font-weight: bold;
+  margin: 0;
+}
+
+.why_card + .why_card {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .why_cardgroup {
+    flex-direction: row;
+  }
+  .why_card + .why_card {
+      margin-top: 0;
+    margin-left: 2rem;
+  }
+}
