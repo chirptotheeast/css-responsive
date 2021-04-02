@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "css-responsive-practice",
+		"path": "."
+	},
+	{
+		"name": "images",
+		"path": "../../demo-responsive/images"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "css-responsive-practice"
+  }
+}
